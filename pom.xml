@@ -26,9 +26,9 @@
 		<version>0.6-SNAPSHOT</version>
 	</parent>
 
-	<artifactId>cora-docker-therest</artifactId>
+	<artifactId>alvin-docker-cora</artifactId>
 	<packaging>pom</packaging>
-	<version>0.3-SNAPSHOT</version>
+	<version>0.1-SNAPSHOT</version>
 	<name>Alvin cora docker</name>
 
 	<properties>
