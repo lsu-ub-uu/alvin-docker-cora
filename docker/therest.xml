@@ -3,7 +3,7 @@
 		value="se.uu.ub.cora.alvin.AlvinDependencyProvider" override="false" />
 	<Parameter name="gatekeeperURL" value="http://gatekeeper:8080/gatekeeper/"
 		override="false" />
-	<Parameter name="storageOnDiskClassName" value="se.uu.ub.cora.storage.RecordStorageInMemoryReadFromDisk"
+	<Parameter name="basicStorageClassName" value="se.uu.ub.cora.storage.RecordStorageInMemoryReadFromDisk"
 		override="false" />	  
 	<Parameter name="storageOnDiskBasePath" value="/mnt/data/basicstorage/"
 		override="false" />
@@ -11,10 +11,20 @@
 		override="false" />
 	<Parameter name="theRestPublicPathToSystem" value="/alvin/rest/"
 		override="false" />
-	<Parameter name="mixedStorageClassName" value="se.uu.ub.cora.alvin.mixedstorage.AlvinMixedRecordStorage"
+	<Parameter name="storageClassName" value="se.uu.ub.cora.alvin.mixedstorage.AlvinMixedRecordStorage"
 		override="false" />	  
-	<Parameter name="alvinToCoraStorageClassName" value="se.uu.ub.cora.alvin.tocorastorage.AlvinToCoraRecordStorage"
-		override="false" />	  
+	<Parameter name="alvinFedoraToCoraStorageClassName" 
+		value="se.uu.ub.cora.alvin.tocorastorage.fedora.AlvinFedoraToCoraRecordStorage" override="false" />	  
+	<Parameter name="alvinDbToCoraStorageClassName" 
+		value="se.uu.ub.cora.alvin.tocorastorage.db.AlvinDbToCoraRecordStorage" override="false" />
+		
+	<Parameter name="databaseLookupName" value="java:/comp/env/jdbc/postgres" override="false" />
+	<Resource name="jdbc/postgres" auth="Container" type="javax.sql.DataSource"
+		driverClassName="org.postgresql.Driver"
+		url="jdbc:postgresql://alvin-cora-docker-postgresql:5432/alvin"
+		username="alvin" password="alvin" maxTotal="20" maxIdle="10"
+		maxWaitMillis="-1" />
+			
 	<Parameter name="fedoraURL" value="http://alvin-cora-fedora:8088/fedora/"
 		override="false" />
 </Context>
