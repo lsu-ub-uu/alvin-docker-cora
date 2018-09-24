@@ -1,5 +1,7 @@
 FROM  tomcat:jre8-alpine
 
+COPY /storagefiles /mnt/data/basicstorage
+
 COPY /therest.war /usr/local/tomcat/webapps/therest.war
 COPY /therest.xml /usr/local/tomcat/conf/Catalina/localhost/therest.xml 
 COPY /alvin.jar /usr/local/tomcat/lib/alvin.jar
