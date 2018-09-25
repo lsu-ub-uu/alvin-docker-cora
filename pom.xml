@@ -55,6 +55,18 @@
 	<dependencies>
 		<dependency>
 			<groupId>se.uu.ub.cora</groupId>
+			<artifactId>cora-metadata</artifactId>
+			<version>${cora-metadata.version}</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>se.uu.ub.cora</groupId>
+			<artifactId>alvin-metadata</artifactId>
+			<version>${alvin-metadata.version}</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>se.uu.ub.cora</groupId>
 			<artifactId>alvin</artifactId>
 			<version>${alvin.version}</version>
 			<scope>compile</scope>
