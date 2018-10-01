@@ -20,11 +20,11 @@
 
 	<artifactId>alvin-docker-cora</artifactId>
 	<packaging>pom</packaging>
-	<version>0.1-SNAPSHOT</version>
+	<version>0.2-SNAPSHOT</version>
 	<name>Alvin cora docker</name>
 
 	<properties>
-		<alvin.version>0.1-SNAPSHOT</alvin.version>
+		<alvin.version>0.2-SNAPSHOT</alvin.version>
 		<therest.version>0.15-SNAPSHOT</therest.version>
 		<cora-metadata.version>0.1-SNAPSHOT</cora-metadata.version>
 		<alvin-metadata.version>0.1-SNAPSHOT</alvin-metadata.version>
