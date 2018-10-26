@@ -35,7 +35,7 @@
 	<properties>
 		<outputDirectory>${project.build.directory}/docker2</outputDirectory>
 
-		<alvin.version>0.3-SNAPSHOT</alvin.version>
+		<alvin.version>0.4-SNAPSHOT</alvin.version>
 		<therest.version>0.16-SNAPSHOT</therest.version>
 		<cora-metadata.version>0.2-SNAPSHOT</cora-metadata.version>
 		<alvin-metadata.version>0.2-SNAPSHOT</alvin-metadata.version>
