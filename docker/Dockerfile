@@ -6,6 +6,10 @@ COPY /therest.war /usr/local/tomcat/webapps/therest.war
 COPY /therest.xml /usr/local/tomcat/conf/Catalina/localhost/therest.xml 
 COPY /alvin.jar /usr/local/tomcat/lib/alvin.jar
 
+COPY files/fedoraDockerPublicKey.pem /usr/local/tomcat/fedoraDockerPublicKey.pem
+
+RUN keytool  -import -noprompt -alias fedoraDockerCert -keystore default -file /usr/local/tomcat/fedoraDockerPublicKey.pem -storepass changeit
+
 #build with:
 #maven package
 
