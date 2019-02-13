@@ -10,6 +10,10 @@ COPY files/fedoraDockerPublicKey.pem /usr/local/tomcat/fedoraDockerPublicKey.pem
 
 RUN keytool  -import -noprompt -alias fedoraDockerCert -keystore default -file /usr/local/tomcat/fedoraDockerPublicKey.pem -storepass changeit
 
+COPY files/fedoraDockerCert.cert /usr/local/tomcat/fedoraDockerCert.cert
+
+RUN keytool  -import -noprompt -alias fedoraDockerCert2 -keystore default -file /usr/local/tomcat/fedoraDockerCert.cert -storepass changeit
+
 #build with:
 #maven package
 
