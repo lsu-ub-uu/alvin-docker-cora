@@ -25,7 +25,8 @@
 		username="alvin" password="alvin" maxTotal="20" maxIdle="10"
 		maxWaitMillis="-1" />
 			
-	<Parameter name="fedoraURL" value="https://alvin-cora-fedora:8443/fedora/" override="false"/>
+<!-- 	<Parameter name="fedoraURL" value="https://alvin-cora-fedora:8443/fedora/" override="false"/> -->
+	<Parameter name="fedoraURL" value="http://alvin-cora-fedora:8088/fedora/" override="false"/>
 	<Parameter name="fedoraUsername" value="fedoraAdmin" override="false"/>
 	<Parameter name="fedoraPassword" value="changeit" override="false" />
 	
