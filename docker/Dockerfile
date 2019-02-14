@@ -8,11 +8,11 @@ COPY /alvin.jar /usr/local/tomcat/lib/alvin.jar
 
 COPY files/fedoraDockerPublicKey.pem /usr/local/tomcat/fedoraDockerPublicKey.pem
 
-RUN keytool  -import -noprompt -alias fedoraDockerCert -keystore default -file /usr/local/tomcat/fedoraDockerPublicKey.pem -storepass changeit
+RUN keytool  -import -noprompt -trustcacerts -alias fedoraDockerCert -keystore cacerts -file /usr/local/tomcat/fedoraDockerPublicKey.pem -storepass changeit
 
 COPY files/fedoraDockerCert.cert /usr/local/tomcat/fedoraDockerCert.cert
 
-RUN keytool  -import -noprompt -alias fedoraDockerCert2 -keystore default -file /usr/local/tomcat/fedoraDockerCert.cert -storepass changeit
+RUN keytool  -import -noprompt -trustcacerts -alias fedoraDockerCert2 -keystore cacerts -file /usr/local/tomcat/fedoraDockerCert.cert -storepass changeit
 
 #build with:
 #maven package
