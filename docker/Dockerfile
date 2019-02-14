@@ -6,13 +6,9 @@ COPY /therest.war /usr/local/tomcat/webapps/therest.war
 COPY /therest.xml /usr/local/tomcat/conf/Catalina/localhost/therest.xml 
 COPY /alvin.jar /usr/local/tomcat/lib/alvin.jar
 
-COPY files/fedoraDockerPublicKey.pem /usr/local/tomcat/fedoraDockerPublicKey.pem
+COPY files/fedoraKeystore.jks /usr/local/tomcat/fedoraKeystore.jks
 
-RUN keytool  -import -noprompt -trustcacerts -alias fedoraDockerCert -keystore cacerts -file /usr/local/tomcat/fedoraDockerPublicKey.pem -storepass changeit
-
-COPY files/fedoraDockerCert.cert /usr/local/tomcat/fedoraDockerCert.cert
-
-RUN keytool  -import -noprompt -trustcacerts -alias fedoraDockerCert2 -keystore cacerts -file /usr/local/tomcat/fedoraDockerCert.cert -storepass changeit
+ENV JAVA_OPTS="-Djavax.net.ssl.trustStore=/usr/local/tomcat/fedoraKeystore.jks -Djavax.net.ssl.trustStorePassword=changeit"
 
 #build with:
 #maven package
