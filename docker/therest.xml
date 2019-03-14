@@ -14,9 +14,9 @@
 	<Parameter name="storageClassName" value="se.uu.ub.cora.alvin.mixedstorage.AlvinMixedRecordStorage"
 		override="false" />	  
 	<Parameter name="fedoraToCoraStorageClassName" 
-		value="se.uu.ub.cora.alvin.tocorastorage.fedora.AlvinFedoraToCoraRecordStorage" override="false" />	  
+		value="se.uu.ub.cora.alvin.mixedstorage.fedora.FedoraRecordStorage" override="false" />	  
 	<Parameter name="dbToCoraStorageClassName" 
-		value="se.uu.ub.cora.alvin.tocorastorage.db.AlvinDbToCoraRecordStorage" override="false" />
+		value="se.uu.ub.cora.alvin.mixedstorage.db.AlvinDbToCoraRecordStorage" override="false" />
 		
 	<Parameter name="databaseLookupName" value="java:/comp/env/jdbc/postgres" override="false" />
 	<Resource name="jdbc/postgres" auth="Container" type="javax.sql.DataSource"
