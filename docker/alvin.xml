@@ -24,4 +24,6 @@
 	<Parameter name="fedoraUsername" value="fedoraAdmin" override="false"/>
 	<Parameter name="fedoraPassword" value="changeit" override="false" />
 	
+	<Parameter name="messageServerHostname" value="messaging.alvin-portal.org" override="false" />
+	<Parameter name="messageServerPort" value="5672" override="false" />
 </Context>
