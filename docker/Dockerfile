@@ -1,6 +1,8 @@
 FROM  tomcat:9.0.27-jdk12-adoptopenjdk-hotspot
 
-COPY /storagefiles /mnt/data/basicstorage
+COPY /storagefiles/cora /mnt/data/basicstorage/cora
+COPY /storagefiles/jsClient /mnt/data/basicstorage/jsClient
+COPY /storagefiles/alvin /mnt/data/basicstorage/alvin
 
 COPY /alvin*.war /usr/local/tomcat/webapps/alvin.war
 COPY /alvin.xml /usr/local/tomcat/conf/Catalina/localhost/alvin.xml 
