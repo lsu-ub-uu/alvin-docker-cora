@@ -1,6 +1,6 @@
 <Context>
 	<Parameter name="dependencyProviderClassName"
-		value="se.uu.ub.cora.alvin.AlvinDependencyProvider" override="false" />
+		value="se.uu.ub.cora.therest.initialize.TheRestDependencyProvider" override="false" />
 	<Parameter name="gatekeeperURL" value="http://gatekeeper:8080/gatekeeperserver/"
 		override="false" />
 	<Parameter name="storageOnDiskBasePath" value="/mnt/data/basicstorage/"
