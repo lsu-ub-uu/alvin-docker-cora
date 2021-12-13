@@ -29,10 +29,10 @@
 		
 		<cora-docker-tomcat.version>2.0.0</cora-docker-tomcat.version>
 		
-		<cora-metadata.version>0.5-SNAPSHOT</cora-metadata.version>
+		<cora-metadata.version>0.6-SNAPSHOT</cora-metadata.version>
 		<alvin-metadata.version>0.4-SNAPSHOT</alvin-metadata.version>
 		
-		<alvin.version>5.1-SNAPSHOT</alvin.version>
+		<alvin.version>5.2-SNAPSHOT</alvin.version>
 	</properties>
 
 	<scm>
