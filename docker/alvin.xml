@@ -21,6 +21,7 @@
 			
 	<Parameter name="fedoraURL" value="https://alvin-cora-fedora:8443/fedora/" override="false"/>
 <!-- 	<Parameter name="fedoraURL" value="http://alvin-cora-fedora:8088/fedora/" override="false"/> -->
+	<Parameter name="fedoraArchiveURL" value="http://alvin-docker-fedora:8080/fcrepo/rest/" override="false" />
 	<Parameter name="fedoraUsername" value="fedoraAdmin" override="false"/>
 	<Parameter name="fedoraPassword" value="changeit" override="false" />
 	
