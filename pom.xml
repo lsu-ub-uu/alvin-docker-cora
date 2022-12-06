@@ -15,7 +15,7 @@
 	<parent>
 		<groupId>se.uu.ub.cora</groupId>
 		<artifactId>cora-parent</artifactId>
-		<version>2.0.0</version>
+		<version>2.3.0</version>
 	</parent>
 
 	<artifactId>alvin-docker-cora</artifactId>
@@ -27,12 +27,12 @@
 		<outputDirectory>${project.build.directory}/docker2</outputDirectory>
 		<exec-maven-plugin.version>3.0.0</exec-maven-plugin.version>
 		
-		<cora-docker-tomcat.version>2.1.0</cora-docker-tomcat.version>
+		<cora-docker-tomcat.version>2.2.0</cora-docker-tomcat.version>
 		
-		<cora-metadata.version>0.6-SNAPSHOT</cora-metadata.version>
-		<alvin-metadata.version>0.4-SNAPSHOT</alvin-metadata.version>
+		<alvin.version>6.0-SNAPSHOT</alvin.version>
 		
-		<alvin.version>5.5-SNAPSHOT</alvin.version>
+		<cora-metadata.version>1.0-SNAPSHOT</cora-metadata.version>
+		<alvin-metadata.version>1.0-SNAPSHOT</alvin-metadata.version>
 	</properties>
 
 	<scm>
