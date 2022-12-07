@@ -13,7 +13,7 @@
 		value="/alvin/rest/" override="false" />
 
 	<Parameter name="fedoraArchiveURL"
-		value="http://alvin-docker-fedora:8080/fcrepo/rest/" override="false" />
+		value="http://alvin-fedora:8080/fcrepo/rest/" override="false" />
 
 	<Parameter name="storageType" value="memory" override="false" />
 
