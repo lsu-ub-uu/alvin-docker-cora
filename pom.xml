@@ -32,7 +32,7 @@
 		<alvin.version>6.3-SNAPSHOT</alvin.version>
 		
 		<cora-metadata.version>1.0-SNAPSHOT</cora-metadata.version>
-		<alvin-metadata.version>1.0-SNAPSHOT</alvin-metadata.version>
+		<alvin-metadata.version>1.0.0</alvin-metadata.version>
 	</properties>
 
 	<scm>
