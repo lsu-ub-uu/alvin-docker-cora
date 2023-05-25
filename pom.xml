@@ -74,6 +74,54 @@
 				</executions>
 			</plugin>
 			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>3.1.1</version>
+				<executions>
+					<execution>
+						<id>copy-dependencies</id>
+						<phase>package</phase>
+						<goals>
+							<goal>copy-dependencies</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${outputDirectory}</outputDirectory>
+<!--							<excludeArtifactIds>cora-metadata, alvin-metadata</excludeArtifactIds>-->
+							<overWriteReleases>true</overWriteReleases>
+							<overWriteSnapshots>true</overWriteSnapshots>
+							<overWriteIfNewer>true</overWriteIfNewer>
+						</configuration>
+					</execution>
+<!--					<execution>-->
+<!--						<id>unpack</id>-->
+<!--						<phase>package</phase>-->
+<!--						<goals>-->
+<!--							<goal>unpack</goal>-->
+<!--						</goals>-->
+<!--						<configuration>-->
+<!--							<artifactItems>-->
+<!--								<artifactItem>-->
+<!--									<groupId>se.uu.ub.cora</groupId>-->
+<!--									<artifactId>cora-metadata</artifactId>-->
+<!--									<version>${cora-metadata.version}</version>-->
+<!--								</artifactItem>-->
+<!--								<artifactItem>-->
+<!--									<groupId>se.uu.ub.cora</groupId>-->
+<!--									<artifactId>alvin-metadata</artifactId>-->
+<!--									<version>${alvin-metadata.version}</version>-->
+<!--								</artifactItem>-->
+<!---->
+<!--							</artifactItems>-->
+<!--							<includes>**/*.json*</includes>-->
+<!--							<outputDirectory>${outputDirectory}</outputDirectory>-->
+<!--							<overWrite>true</overWrite>-->
+<!--							<overWriteReleases>true</overWriteReleases>-->
+<!--							<overWriteSnapshots>true</overWriteSnapshots>-->
+<!--						</configuration>-->
+<!--					</execution>-->
+				</executions>
+			</plugin>
+			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>exec-maven-plugin</artifactId>
 				<version>${exec-maven-plugin.version}</version>
