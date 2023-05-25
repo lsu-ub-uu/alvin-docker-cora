@@ -7,9 +7,7 @@
 	of ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the ~ GNU General 
 	Public License for more details. ~ ~ You should have received a copy of the 
 	GNU General Public License ~ along with Cora. If not, see <http://www.gnu.org/licenses/>. -->
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
@@ -24,15 +22,11 @@
 	<name>Alvin cora docker</name>
 
 	<properties>
+		<cora-docker-tomcat.version>2.2.0</cora-docker-tomcat.version>
+		<alvin.version>6.3-SNAPSHOT</alvin.version>
+
 		<outputDirectory>${project.build.directory}/docker2</outputDirectory>
 		<exec-maven-plugin.version>3.0.0</exec-maven-plugin.version>
-		
-		<cora-docker-tomcat.version>2.2.0</cora-docker-tomcat.version>
-		
-		<alvin.version>6.3-SNAPSHOT</alvin.version>
-		
-		<cora-metadata.version>1.1-SNAPSHOT</cora-metadata.version>
-		<alvin-metadata.version>1.1-SNAPSHOT</alvin-metadata.version>
 	</properties>
 
 	<scm>
@@ -42,7 +36,7 @@
 	</scm>
 
 	<dependencies>
-			<dependency>
+		<dependency>
 			<groupId>se.uu.ub.cora</groupId>
 			<artifactId>cora-docker-tomcat</artifactId>
 			<version>${cora-docker-tomcat.version}</version>
@@ -51,96 +45,14 @@
 		</dependency>
 		<dependency>
 			<groupId>se.uu.ub.cora</groupId>
-			<artifactId>cora-metadata</artifactId>
-			<version>${cora-metadata.version}</version>
-			<scope>compile</scope>
-		</dependency>
-		<dependency>
-			<groupId>se.uu.ub.cora</groupId>
-			<artifactId>alvin-metadata</artifactId>
-			<version>${alvin-metadata.version}</version>
-			<scope>compile</scope>
-		</dependency>
-
-		<dependency>
-			<groupId>se.uu.ub.cora</groupId>
 			<artifactId>alvin</artifactId>
 			<version>${alvin.version}</version>
 			<type>war</type>
 			<scope>compile</scope>
 		</dependency>
 	</dependencies>
-
 	<build>
 		<plugins>
-			<plugin>
-				<artifactId>maven-resources-plugin</artifactId>
-				<executions>
-					<execution>
-						<id>copy-resources</id>
-						<phase>process-resources</phase>
-						<goals>
-							<goal>copy-resources</goal>
-						</goals>
-						<configuration>
-							<outputDirectory>${outputDirectory}</outputDirectory>
-							<resources>
-								<resource>
-									<directory>docker</directory>
-								</resource>
-							</resources>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-dependency-plugin</artifactId>
-				<version>3.1.1</version>
-				<executions>
-					<execution>
-						<id>copy-dependencies</id>
-						<phase>package</phase>
-						<goals>
-							<goal>copy-dependencies</goal>
-						</goals>
-						<configuration>
-							<outputDirectory>${outputDirectory}</outputDirectory>
-							<excludeArtifactIds>cora-metadata, alvin-metadata</excludeArtifactIds>
-							<overWriteReleases>true</overWriteReleases>
-							<overWriteSnapshots>true</overWriteSnapshots>
-							<overWriteIfNewer>true</overWriteIfNewer>
-						</configuration>
-					</execution>
-					<execution>
-						<id>unpack</id>
-						<phase>package</phase>
-						<goals>
-							<goal>unpack</goal>
-						</goals>
-						<configuration>
-							<artifactItems>
-								<artifactItem>
-									<groupId>se.uu.ub.cora</groupId>
-									<artifactId>cora-metadata</artifactId>
-									<version>${cora-metadata.version}</version>
-								</artifactItem>
-								<artifactItem>
-									<groupId>se.uu.ub.cora</groupId>
-									<artifactId>alvin-metadata</artifactId>
-									<version>${alvin-metadata.version}</version>
-								</artifactItem>
-
-							</artifactItems>
-							<includes>**/*.json*</includes>
-							<outputDirectory>${outputDirectory}</outputDirectory>
-							<overWrite>true</overWrite>
-							<overWriteReleases>true</overWriteReleases>
-							<overWriteSnapshots>true</overWriteSnapshots>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>exec-maven-plugin</artifactId>
