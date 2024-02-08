@@ -35,4 +35,7 @@
 	<Parameter name="rabbitMqImageExchange" value="imageConverterExchange" override="false" />
 	<Parameter name="rabbitMqPdfExchange" value="pdfConverterExchange" override="false" />
 	<Parameter name="rabbitMqRoutingKey" value="" override="false" />
+	
+	<Parameter name="iiifBaseUrl"
+		value="http://alvin-iiif:8080/iiif/" override="false" />
 </Context>
