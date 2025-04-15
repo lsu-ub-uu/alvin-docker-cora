@@ -22,8 +22,8 @@
 	<name>Alvin cora docker</name>
 
 	<properties>
-		<cora-docker-tomcat.version>2.4.0</cora-docker-tomcat.version>
-		<alvin.version>6.25-SNAPSHOT</alvin.version>
+		<cora-docker-tomcat.version>2.5.0</cora-docker-tomcat.version>
+		<alvin.version>6.27-SNAPSHOT</alvin.version>
 
 		<outputDirectory>${project.build.directory}/docker2</outputDirectory>
 		<exec-maven-plugin.version>3.5.0</exec-maven-plugin.version>
