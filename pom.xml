@@ -23,7 +23,7 @@
 
 	<properties>
 		<cora-docker-tomcat.version>2.7.0</cora-docker-tomcat.version>
-		<alvin.version>6.50.0</alvin.version>
+		<alvin.version>6.51.0</alvin.version>
 
 		<!-- Override property so docker-build profile activates in this module -->
 		<docker.build.activate>true</docker.build.activate>
