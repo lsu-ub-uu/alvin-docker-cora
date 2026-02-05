@@ -18,7 +18,7 @@
 
 	<artifactId>alvin-docker-cora</artifactId>
 	<packaging>pom</packaging>
-	<version>1.26.0</version>
+	<version>1.26.1-SNAPSHOT</version>
 	<name>Alvin cora docker</name>
 
 	<properties>
@@ -33,7 +33,7 @@
 		<connection>scm:git:https://github.com/lsu-ub-uu/alvin-docker-cora.git</connection>
 		<developerConnection>scm:git:https://github.com/lsu-ub-uu/alvin-docker-cora.git</developerConnection>
 		<url>https://github.com/lsu-ub-uu/alvin-docker-cora.git</url>
-	  <tag>alvin-docker-cora-1.26.0</tag>
+	  <tag>release/1.26</tag>
   </scm>
 
 	<dependencies>
